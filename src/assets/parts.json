@@ -1,0 +1,23 @@
+{
+    "cpu": {
+        "i5-9400F": {"cores": 6, "frequency": 4.1, "tdp": 65, "socket": "LGA1151"}
+    },
+    "ram": {
+
+    },
+    "motherboard": {
+
+    },
+    "gpu": {
+
+    },
+    "storage": {
+
+    },
+    "case": {
+
+    },
+    "psu": {
+        
+    }
+}
