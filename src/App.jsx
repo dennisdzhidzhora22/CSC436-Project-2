@@ -13,8 +13,9 @@ function App() {
     <div>
       <Header />
 
-      <main>
+      <main className="site-main">
         <p>2 columns: left one has multiple tabs for each part of the PC, right one is the "cart" with currently selected parts, some stats like wattage and compatibility issues, and total price.</p>
+
       </main>
 
       <Footer />
