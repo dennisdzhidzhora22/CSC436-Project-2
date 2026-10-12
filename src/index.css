@@ -1,38 +1,31 @@
 * { box-sizing: border-box; }
 
 body {
-    min-height: 100vh;
+    margin: 0rem;
+}
+
+.layout {
     display: grid;
     grid-template-columns: 1fr 400px;
-    grid-template-rows: auto 1fr auto;
     grid-template-areas:
-        "head head"
-        "main side"
-        "foot foot";
+        "main side";
     gap: 1rem;
-    background: #000000;
+    margin: 1rem;
     font-family: system-ui, sans-serif;
+    background: #ffffff;
 }
 
-@media (max-width: 680px) {
-    body {
-        grid-template-columns: 0fr 1fr 0fr;
-    }
+.site-header { 
+    padding: 1rem; margin: 1rem;
+    background: #dddddd;
 }
-
-.site-header { grid-area: head; padding: 1rem; background: #bbbbbb; border-radius: 1.5rem; 
-    display: flex; justify-content: space-between; align-items: center; background: #0a1c2f; color: #e0e0e0;
+.parts { 
+    grid-area: main; padding: 1rem; background: #dddddd;
 }
-.site-header ul { display: flex; list-style: none; gap: 1.2rem; }
-.site-header a { text-decoration: none; color: #e0e0e0; }
-.site-header a:hover { text-decoration: underline; color: #3880ad; }
-.site-main { grid-area: main; padding: 1rem; background: #1f2c38; border-radius: 1.5rem; 
-    display: grid; gap: 1rem; min-width: 0;
+.cart { 
+    grid-area: side; padding: 1rem; background: #dddddd;
 }
-.site-footer { grid-area: foot; padding: 1rem; background: #bbbbbb; border-radius: 1.5rem; 
-    text-align: center; background: #0a1c2f; color: #e0e0e0; 
-}
-
-.site-right-sidebar { grid-area: side; background: #000000; color: white; border-radius: 1.5rem; 
-    min-width: 0;
+.site-footer { 
+    padding: 1rem; margin: 1rem;
+    background: #dddddd;
 }
