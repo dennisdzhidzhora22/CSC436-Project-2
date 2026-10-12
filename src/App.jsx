@@ -7,6 +7,8 @@ import Header from './components/Header.jsx'
 import Cart from './components/Cart.jsx'
 import Footer from './components/Footer.jsx'
 
+import { CATEGORIES } from './assets/parts.js'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,6 +18,12 @@ function App() {
 
       <main className="layout">
         <section className="parts">
+          <div className="filters">
+            <div className="category-buttons">
+              {CATEGORIES.map((name) => <button>{name}</button>)}
+            </div>
+          </div>
+
           <p>2 columns: left one has multiple tabs for each part of the PC, right one is the "cart" with currently selected parts, some stats like wattage and compatibility issues, and total price.</p>
         </section>
 
