@@ -38,3 +38,7 @@ body {
     background: #aaaaaa;
     padding: 1rem;
 }
+.item-add-btn {
+    background: #000000;
+    color: #dddddd;
+}
