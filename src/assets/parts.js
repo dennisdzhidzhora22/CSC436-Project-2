@@ -2,7 +2,8 @@ export const CATEGORIES = ['CPU', 'RAM', 'Motherboard', 'GPU', 'Storage', 'Case'
 
 export const PARTS = {
     "cpu": {
-        "i5-9400F": {"cores": 6, "frequency": 4.1, "tdp": 65, "socket": "LGA1151"}
+        "i5-9400F": {"cores": 6, "frequency": 4.1, "tdp": 65, "socket": "LGA1151"},
+        "i9-9900K": {"cores": 8, "frequency": 5, "tdp": 95, "socket": "LGA1151"},
     },
     "ram": {
 
