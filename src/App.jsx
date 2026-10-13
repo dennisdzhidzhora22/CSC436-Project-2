@@ -27,8 +27,8 @@ function App() {
           </div>
 
           <div className="items">
-            {Object.keys(PARTS.cpu).map((name) => 
-              <ItemCard name={name} />
+            {PARTS.cpu.map((item) => 
+              <ItemCard name={item.name} />
             )}
           </div>
 
