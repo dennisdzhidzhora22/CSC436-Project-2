@@ -12,8 +12,8 @@ import { CATEGORIES } from './assets/parts.js'
 import { PARTS } from './assets/parts.js'
 
 function App() {
-  const [count, setCount] = useState(0)
   const [category, setCategory] = useState("cpu")
+  const [selectedItems, setSelectedItems] = useState([])
 
   return (
     <div className="app">
@@ -29,14 +29,14 @@ function App() {
 
           <div className="items">
             {PARTS[category].map((item) => 
-              <ItemCard name={item.name} />
+              <ItemCard name={item.name} onAddClick={() => setSelectedItems([...selectedItems, item])}/>
             )}
           </div>
 
           <p>2 columns: left one has multiple tabs for each part of the PC, right one is the "cart" with currently selected parts, some stats like wattage and compatibility issues, and total price.</p>
         </section>
 
-        <Cart />
+        <Cart selectedItems={selectedItems} />
       </main>
 
       <Footer />
