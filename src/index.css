@@ -10,7 +10,8 @@ body {
     grid-template-areas:
         "main side";
     gap: 1rem;
-    margin: 1rem;
+    margin: 1rem auto;
+    max-width: 80%;
     font-family: system-ui, sans-serif;
     background: #ffffff;
 }
