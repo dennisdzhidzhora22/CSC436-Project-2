@@ -13,6 +13,7 @@ import { PARTS } from './assets/parts.js'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [category, setCategory] = useState("cpu")
 
   return (
     <div className="app">
@@ -22,12 +23,12 @@ function App() {
         <section className="parts">
           <div className="filters">
             <div className="category-buttons">
-              {CATEGORIES.map((name) => <button>{name}</button>)}
+              {CATEGORIES.map((name) => <button className="category-btn" onClick={() => setCategory(name.toLowerCase())}>{name}</button>)}
             </div>
           </div>
 
           <div className="items">
-            {PARTS.cpu.map((item) => 
+            {PARTS[category].map((item) => 
               <ItemCard name={item.name} />
             )}
           </div>
