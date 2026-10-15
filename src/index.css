@@ -44,6 +44,10 @@ body {
     color: #dddddd;
 }
 
+ul {
+    padding-left: 0; margin-left: 0;
+}
 .selected-item {
     display: flex;
+    justify-content: space-between;
 }
