@@ -43,3 +43,7 @@ body {
     background: #000000;
     color: #dddddd;
 }
+
+.selected-item {
+    display: flex;
+}
