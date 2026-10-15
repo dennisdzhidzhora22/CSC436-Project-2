@@ -35,13 +35,13 @@ function App() {
         <section className="parts">
           <div className="filters">
             <div className="category-buttons">
-              {CATEGORIES.map((name) => <button className="category-btn" onClick={() => setCategory(name)}>{name}</button>)}
+              {CATEGORIES.map((name) => <button key={name} className="category-btn" onClick={() => setCategory(name)}>{name}</button>)}
             </div>
           </div>
 
           <div className="items">
             {PARTS[category].map((item) => 
-              <ItemCard item={item} disabled={selectedItems[category] != null} onAddClick={() => handleAddSelectedItem(category, item)} />
+              <ItemCard key={item.id} item={item} disabled={selectedItems[category] != null} onAddClick={() => handleAddSelectedItem(category, item)} />
             )}
           </div>
 
