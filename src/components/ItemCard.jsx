@@ -1,8 +1,8 @@
-export default function ItemCard({ name, onAddClick }) {
+export default function ItemCard({ item, disabled, onAddClick }) {
     return (
         <article className="item">
-            <p>{name}</p>
-            <button className="item-add-btn" onClick={onAddClick}>Add</button>
+            <p>{item.name}</p>
+            <button className="item-add-btn" onClick={onAddClick} disabled={disabled}>Add</button>
         </article>
     )
 }
