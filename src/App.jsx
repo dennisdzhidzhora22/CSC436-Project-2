@@ -14,11 +14,11 @@ import { PARTS } from './assets/parts.js'
 function App() {
   const [category, setCategory] = useState(CATEGORIES[0])
   const [selectedItems, setSelectedItems] = useState(() => 
-    Object.fromEntries(CATEGORIES.map(c => [c, {name: "None"}]))
+    Object.fromEntries(CATEGORIES.map(c => [c, null]))
   )
 
   const handleRemoveSelectedItem = (category) => {
-    setSelectedItems({...selectedItems, [category]: {name: "None"}})
+    setSelectedItems({...selectedItems, [category]: null})
   }
 
   return (
