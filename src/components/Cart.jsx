@@ -1,7 +1,7 @@
 import SelectedItem from "./SelectedItem"
 import { CATEGORIES } from "../assets/parts"
 
-export default function Cart({ selectedItems }) {
+export default function Cart({ selectedItems, handleRemove }) {
     const compatGood = "No issues."
     const compatBad = "Issues found."
     
@@ -15,7 +15,7 @@ export default function Cart({ selectedItems }) {
 
             <ul>
             {CATEGORIES.map((c) => 
-                <SelectedItem category={c} item={selectedItems[c]} />
+                <SelectedItem key={c} category={c} item={selectedItems[c]} onRemoveClick={() => handleRemove(c)} />
             )}
             </ul>
             <hr/>

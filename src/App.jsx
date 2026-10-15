@@ -14,8 +14,12 @@ import { PARTS } from './assets/parts.js'
 function App() {
   const [category, setCategory] = useState(CATEGORIES[0])
   const [selectedItems, setSelectedItems] = useState(() => 
-    Object.fromEntries(CATEGORIES.map(c => [c, {name: "test"}]))
+    Object.fromEntries(CATEGORIES.map(c => [c, {name: "None"}]))
   )
+
+  const handleRemoveSelectedItem = (category) => {
+    setSelectedItems({...selectedItems, [category]: {name: "None"}})
+  }
 
   return (
     <div className="app">
@@ -38,7 +42,7 @@ function App() {
           <p>2 columns: left one has multiple tabs for each part of the PC, right one is the "cart" with currently selected parts, some stats like wattage and compatibility issues, and total price.</p>
         </section>
 
-        <Cart selectedItems={selectedItems} />
+        <Cart selectedItems={selectedItems} handleRemove={handleRemoveSelectedItem} />
       </main>
 
       <Footer />
