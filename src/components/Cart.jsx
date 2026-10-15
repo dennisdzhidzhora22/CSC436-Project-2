@@ -15,14 +15,14 @@ export default function Cart({ selectedItems }) {
 
             <ul>
             {CATEGORIES.map((c) => 
-                <SelectedItem category={c} item={{name: "test"}} />
+                <SelectedItem category={c} item={selectedItems[c]} />
             )}
             </ul>
             <hr/>
 
             <p>Wattage: {0}W</p>
             <hr/>
-            
+
             <p>Total: ${0}</p>
         </aside>
     )

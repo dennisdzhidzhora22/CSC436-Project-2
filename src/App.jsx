@@ -12,8 +12,10 @@ import { CATEGORIES } from './assets/parts.js'
 import { PARTS } from './assets/parts.js'
 
 function App() {
-  const [category, setCategory] = useState("cpu")
-  const [selectedItems, setSelectedItems] = useState([])
+  const [category, setCategory] = useState(CATEGORIES[0])
+  const [selectedItems, setSelectedItems] = useState(() => 
+    Object.fromEntries(CATEGORIES.map(c => [c, {name: "test"}]))
+  )
 
   return (
     <div className="app">
@@ -23,13 +25,13 @@ function App() {
         <section className="parts">
           <div className="filters">
             <div className="category-buttons">
-              {CATEGORIES.map((name) => <button className="category-btn" onClick={() => setCategory(name.toLowerCase())}>{name}</button>)}
+              {CATEGORIES.map((name) => <button className="category-btn" onClick={() => setCategory(name)}>{name}</button>)}
             </div>
           </div>
 
           <div className="items">
             {PARTS[category].map((item) => 
-              <ItemCard name={item.name} onAddClick={() => setSelectedItems([...selectedItems, item])}/>
+              <ItemCard name={item.name} onAddClick={() => setSelectedItems({...selectedItems, [category]: item})} />
             )}
           </div>
 
