@@ -17,6 +17,12 @@ function App() {
     Object.fromEntries(CATEGORIES.map(c => [c, null]))
   )
 
+  const handleAddSelectedItem = (category, item) => {
+    if (selectedItems[category] === null) {
+      setSelectedItems({...selectedItems, [category]: item})
+    }
+  }
+
   const handleRemoveSelectedItem = (category) => {
     setSelectedItems({...selectedItems, [category]: null})
   }
@@ -35,7 +41,7 @@ function App() {
 
           <div className="items">
             {PARTS[category].map((item) => 
-              <ItemCard name={item.name} onAddClick={() => setSelectedItems({...selectedItems, [category]: item})} />
+              <ItemCard name={item.name} onAddClick={() => handleAddSelectedItem(category, item)} />
             )}
           </div>
 
