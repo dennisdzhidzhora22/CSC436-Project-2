@@ -12,18 +12,18 @@ export const PARTS = {
         {id: "ram1", name: "Corsair Vengeance LPX 32 GB", modules: "2 x 16GB", speed: "DDR4-3200"},
     ],
     "Motherboard": [
-
+        {id: "motherboard1", name: "Z890"}
     ],
     "GPU": [
         {id: "gpu1", name: "RTX 3060", vram: "12GB", tdp: 170}
     ],
     "Storage": [
-
+        {id: "storage1", name: "Samsung", size: "1TB"}
     ],
     "Case": [
-
+        {id: "case1", name: "Lian-Li", formFactor: "ATX"}
     ],
     "PSU": [
-
+        {id: "psu1", name: "Corsair", wattage: 600}
     ]
 }
