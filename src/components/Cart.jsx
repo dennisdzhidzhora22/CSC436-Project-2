@@ -25,6 +25,11 @@ export default function Cart({ selectedItems, handleRemove }) {
             <hr/>
 
             <p>Compatibility: {compatIssues.length === 0 ? compatGood : compatBad}</p>
+            <ol>
+            {compatIssues.map((issue) => 
+                <li key={issue}>{issue}</li>
+            )}
+            </ol>
             <hr/>
 
             <ul>
