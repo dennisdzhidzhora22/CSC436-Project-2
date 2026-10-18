@@ -15,9 +15,11 @@ export default function Cart({ selectedItems, handleRemove }) {
     }, 0)
 
     // PSU Wattage check
-    if ((selectedItems["PSU"]?.wattage ?? 0) < wattage) {
-        compatIssues.push("Power supply wattage too low")
+    const psuWattage = selectedItems["PSU"]?.wattage ?? 0
+    if (psuWattage < wattage) {
+        compatIssues.push(`Power supply missing or wattage too low (Currently ${psuWattage}W)`)
     }
+    // CPU and Motherboard chipset compatibility check
     
     return (
         <aside className="cart">
