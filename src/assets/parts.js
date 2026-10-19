@@ -9,7 +9,8 @@ export const PARTS = {
         {id: "cpu5", manufacturer: "Intel", name: "U7 270K+", cores: 24, frequency: 5.5, tdp: 125, socket: "LGA1851", chipset: "800", price: 265},
     ],
     "RAM": [
-        {id: "ram1", manufacturer: "Corsair", name: "Vengeance LPX 32 GB", modules: "2 x 16GB", type: "DDR4", speed: "3200", price: 75},
+        {id: "ram1", manufacturer: "Corsair", name: "Vengeance LPX 32 GB", modules: "2 x 16GB", ramType: "DDR4", speed: "3200", price: 75},
+        {id: "ram2", manufacturer: "G.Skill", name: "Flare X5 32 GB", modules: "2 x 16GB", ramType: "DDR5", speed: "6000", price: 85},
     ],
     "Motherboard": [
         {id: "motherboard1", manufacturer: "Gigabyte", name: "Z890 EAGLE WIFI7 PLUS", socket: "LGA1851", chipset: "800", ramType: "DDR5", price: 250}

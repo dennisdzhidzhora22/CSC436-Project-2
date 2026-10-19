@@ -15,7 +15,7 @@ export default function ItemCard({ item, category, disabled, onAddClick }) {
             itemCardContent = 
             <p>
                 {item.manufacturer} {item.name}<br/><br/>
-                Speed: {item.type}-{item.speed}<br/>
+                Speed: {item.ramType}-{item.speed}<br/>
                 Modules: {item.modules}<br/><br/>
                 ${item.price}
             </p>;
