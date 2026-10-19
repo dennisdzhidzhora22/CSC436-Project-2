@@ -41,7 +41,7 @@ function App() {
 
           <div className="items">
             {PARTS[category].map((item) => 
-              <ItemCard key={item.id} item={item} disabled={selectedItems[category] != null} onAddClick={() => handleAddSelectedItem(category, item)} />
+              <ItemCard key={item.id} item={item} category={category} disabled={selectedItems[category] != null} onAddClick={() => handleAddSelectedItem(category, item)} />
             )}
           </div>
 
