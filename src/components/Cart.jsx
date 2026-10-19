@@ -19,8 +19,18 @@ export default function Cart({ selectedItems, handleRemove }) {
     if (psuWattage < wattage) {
         compatIssues.push(`Power supply missing or wattage too low (Currently ${psuWattage}W)`)
     }
-    // CPU and Motherboard chipset compatibility check
-    
+    // CPU and Motherboard chipset & socket compatibility check
+    const chipsetMismatch = selectedItems["CPU"]?.chipset != selectedItems["Motherboard"]?.chipset
+    const socketMismatch = selectedItems["CPU"]?.socket != selectedItems["Motherboard"]?.socket
+    if (chipsetMismatch || socketMismatch) {
+        compatIssues.push(`CPU and Motherboard chipset and/or socket mismatched`)
+    }
+    // RAM and Motherboard compatibility check
+    const ramTypeMismatch = selectedItems["RAM"]?.ramType != selectedItems["Motherboard"]?.ramType
+    if (ramTypeMismatch) {
+        compatIssues.push(`RAM type mismatch (RAM: ${selectedItems["RAM"]?.ramType}, Motherboard: ${selectedItems["Motherboard"]?.ramType})`)
+    }
+
     return (
         <aside className="cart">
             <h2>Selected Parts</h2>
