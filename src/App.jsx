@@ -44,8 +44,6 @@ function App() {
               <ItemCard key={item.id} item={item} category={category} disabled={selectedItems[category] != null} onAddClick={() => handleAddSelectedItem(category, item)} />
             )}
           </div>
-
-          <p>2 columns: left one has multiple tabs for each part of the PC, right one is the "cart" with currently selected parts, some stats like wattage and compatibility issues, and total price.</p>
         </section>
 
         <Cart selectedItems={selectedItems} handleRemove={handleRemoveSelectedItem} />
