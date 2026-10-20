@@ -1,3 +1,5 @@
+import { IMAGES } from '../assets/images/images.js'
+
 export default function ItemCard({ item, category, disabled, onAddClick }) {
     let itemCardContent
 
@@ -7,7 +9,8 @@ export default function ItemCard({ item, category, disabled, onAddClick }) {
             <p>
                 {item.manufacturer} {item.name}<br/><br/>
                 Cores: {item.cores}<br/>
-                TDP: {item.tdp}W<br/><br/>
+                TDP: {item.tdp}W<br/>
+                Socket: {item.socket}<br/><br/>
                 ${item.price}
             </p>;
             break
@@ -67,6 +70,7 @@ export default function ItemCard({ item, category, disabled, onAddClick }) {
 
     return (
         <article className="item">
+            <img className="item-img" src={IMAGES[item.id]} />
             {itemCardContent}
             <button className="item-add-btn" onClick={onAddClick} disabled={disabled}>Add</button>
         </article>
