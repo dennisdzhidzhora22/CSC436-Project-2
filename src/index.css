@@ -50,9 +50,11 @@ body {
 }
 
 .item {
+    display: flex; flex-direction: column;
     background: #ffffff;
     padding: 1rem;
     border-radius: 1rem;
+    align-items: flex-start;
 }
 .item-add-btn {
     background: #000000;
@@ -61,6 +63,8 @@ body {
 .item-img {
     max-height: 200px;
     max-width: 200px;
+    align-self: center;
+    margin: auto;
 }
 
 .cart { 
