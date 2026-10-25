@@ -52,12 +52,12 @@ body {
     transition-duration: 0.2s
 }
 .category-btn:hover {
-    background-color: #ff9a00;
-    border: 4px solid #ff9a00;
+    background-color: #ffa927;
+    border: 4px solid #ffa927;
 }
 .category-btn-active {
-    background-color: #ff9a00;
-    border: 4px solid #ff9a00;
+    background-color: #ffa927;
+    border: 4px solid #ffa927;
 }
 .items {
     display: grid;
@@ -80,8 +80,8 @@ body {
     transition-duration: 0.2s;
 }
 .item-add-btn:hover {
-    background-color: #ff9a00;
-    border: 2px solid #ff9a00;
+    background-color: #ffa927;
+    border: 2px solid #ffa927;
 }
 .item-img {
     max-height: 200px;
