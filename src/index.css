@@ -41,7 +41,7 @@ body {
 
 .parts { 
     grid-area: layout-main; background: #e9e9e9;
-    border-radius: 1rem 0 1rem 0;
+    border-radius: 2rem 0 3rem 0;
     padding: 1rem;
 }
 .category-btn {
@@ -92,11 +92,24 @@ body {
 
 .cart { 
     grid-area: layout-side; padding: 1rem; background: #e9e9e9;
-    border-radius: 1rem 0 1rem 0;
+    border-radius: 2rem 0 2rem 0;
+    margin-bottom: auto;
 }
 .selected-item {
     display: flex;
     justify-content: space-between;
+}
+.selected-item-remove-btn {
+    background-color: #ffffff;
+    border: 2px solid #e9e9e9;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    transition-duration: 0.2s;
+    align-self: center;
+}
+.selected-item-remove-btn:hover {
+    background-color: #e44113; color: #ffffff;
+    border: 2px solid #e44113;
 }
 
 .site-footer { 
