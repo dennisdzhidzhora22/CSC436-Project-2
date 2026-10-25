@@ -79,9 +79,13 @@ body {
     border-radius: 1.5rem;
     transition-duration: 0.2s;
 }
-.item-add-btn:hover {
+.item-add-btn:hover:not(:disabled) {
     background-color: #ffa927;
     border: 2px solid #ffa927;
+}
+.item-add-btn:disabled {
+    background-color: #ff8000; color: #ffffff;
+    border: 2px solid #ffffff;
 }
 .item-img {
     max-height: 200px;
