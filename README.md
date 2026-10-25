@@ -7,4 +7,4 @@ This is a page that allows users to pick out parts to build a PC with, then show
 With a terminal opened in this directory, run `npm install` followed by `npm run dev`, then open the given localhost link in a browser.
 
 ## Live link:
-[https://ddzh-csc436-project-2.netlify.app/]()
+[https://ddzh-csc436-project-2.netlify.app/](https://ddzh-csc436-project-2.netlify.app/)
