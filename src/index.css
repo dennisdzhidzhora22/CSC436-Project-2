@@ -69,12 +69,19 @@ body {
     display: flex; flex-direction: column;
     background: #ffffff;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     align-items: flex-start;
 }
 .item-add-btn {
-    background: #000000;
-    color: #dddddd;
+    background-color: #ff8000; color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+    transition-duration: 0.2s;
+}
+.item-add-btn:hover {
+    background-color: #ff9a00;
+    border: 2px solid #ff9a00;
 }
 .item-img {
     max-height: 200px;
