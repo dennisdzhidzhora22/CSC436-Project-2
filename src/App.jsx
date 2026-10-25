@@ -7,6 +7,7 @@ import Header from './components/Header.jsx'
 import Cart from './components/Cart.jsx'
 import Footer from './components/Footer.jsx'
 import ItemCard from './components/ItemCard.jsx'
+import CategoryButton from './components/CategoryButton.jsx'
 
 import { CATEGORIES } from './assets/parts.js'
 import { PARTS } from './assets/parts.js'
@@ -16,6 +17,7 @@ function App() {
   const [selectedItems, setSelectedItems] = useState(() => 
     Object.fromEntries(CATEGORIES.map(c => [c, null]))
   )
+  const [selectedCategoryButton, setSelectedCategoryButton] = useState(CATEGORIES[0])
 
   const handleAddSelectedItem = (category, item) => {
     if (selectedItems[category] === null) {
@@ -35,7 +37,8 @@ function App() {
         <section className="parts">
           <div className="filters">
             <div className="category-buttons">
-              {CATEGORIES.map((name) => <button key={name} className="category-btn" onClick={() => setCategory(name)}>{name}</button>)}
+              {CATEGORIES.map((name) => <CategoryButton key={name} className="category-btn" name={name} onCategoryButtonClick={() => setCategory(name)} 
+                selectedCategory={category} />)}
             </div>
           </div>
 
